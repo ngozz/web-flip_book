@@ -195,3 +195,36 @@ input {
     transform: rotateY(-180deg);
     z-index: 6;
 }
+
+/* To change the video width */
+.video_half_container {
+    width: 75%; /* Half the width of the page */
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video_half_container.left {
+    right: 0;
+}
+
+.video_half_container.right {
+    left: 0;
+}
+
+.video_half_container video {
+    position: absolute;
+    width: 200%; /* Make the video twice as wide as the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.video_half_container.left video {
+    left: -0%;
+}
+
+.video_half_container.right video {
+    left: -100%;
+}
